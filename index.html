@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công ty Xây dựng Hưng Thịnh - Dịch Vụ Chống Thấm Chuyên Nghiệp</title>
+    <meta name="description" content="Hưng Thịnh Construction - Chuyên gia chống thấm hàng đầu. Cung cấp giải pháp chống thấm triệt để cho sân thượng, tường nhà, nhà vệ sinh. Cam kết không hết thấm không thu tiền, bảo hành tới 10 năm.">
+    <meta name="keywords" content="chống thấm, công ty xây dựng, hưng thịnh, chống thấm sân thượng, chống thấm tường, chống thấm nhà vệ sinh, dịch vụ chống thấm">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
+            --main-blue: #0D47A1;
+            --secondary-blue: #1976D2;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 28, 58, 0.7), rgba(0, 28, 58, 0.7)), url('images/chong-tham-uy-tinh.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta-button {
+            @apply bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors duration-300 shadow-lg;
+        }
+        
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-[var(--main-blue)] text-center;
+        }
+
+        .highlighted-section-title {
+            @apply inline-block bg-blue-100 py-3 px-6 rounded-lg shadow-sm border border-blue-200;
+        }
+        
+        .section-subtitle {
+            @apply text-center text-gray-600 mt-4 max-w-2xl mx-auto;
+        }
+        
+        .card-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .card-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-[var(--main-blue)]">HƯNG THỊNH</span>
+                    <i data-lucide="shield-check" class="text-amber-500 h-7 w-7"></i>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-[var(--main-blue)] font-medium transition-colors">Dịch Vụ</a>
+                    <a href="#process" class="text-gray-600 hover:text-[var(--main-blue)] font-medium transition-colors">Quy Trình</a>
+                    <a href="#projects" class="text-gray-600 hover:text-[var(--main-blue)] font-medium transition-colors">Dự Án</a>
+                    <a href="#contact" class="text-gray-600 hover:text-[var(--main-blue)] font-medium transition-colors">Liên Hệ</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:0915975234" class="font-bold text-[var(--main-blue)]">HOTLINE: 0915.975.234</a>
+                    <a href="#contact" class="bg-[var(--secondary-blue)] text-white font-semibold py-2 px-5 rounded-md hover:bg-[var(--main-blue)] transition-colors duration-300">
+                        Tư Vấn Miễn Phí
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-full max-w-xs bg-white z-50 shadow-lg md:hidden">
+        <div class="p-4 flex justify-end">
+            <button id="close-mobile-menu" class="text-gray-700">
+                <i data-lucide="x" class="h-8 w-8"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-6 p-6 text-center">
+            <a href="#services" class="mobile-nav-link text-xl text-gray-700 hover:text-[var(--main-blue)]">Dịch Vụ</a>
+            <a href="#process" class="mobile-nav-link text-xl text-gray-700 hover:text-[var(--main-blue)]">Quy Trình</a>
+            <a href="#projects" class="mobile-nav-link text-xl text-gray-700 hover:text-[var(--main-blue)]">Dự Án</a>
+            <a href="#contact" class="mobile-nav-link text-xl text-gray-700 hover:text-[var(--main-blue)]">Liên Hệ</a>
+            <a href="tel:0915975234" class="mt-8 cta-button">
+                Gọi Hotline: 0915.975.234
+            </a>
+        </nav>
+    </div>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white py-24 sm:py-32 lg:py-40">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    GIẢI PHÁP CHỐNG THẤM TRIỆT ĐỂ 100%
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-200">
+                    Xử lý dứt điểm mọi vấn đề thấm dột cho nhà ở, nhà xưởng, công trình. Kinh nghiệm trên 1000+ dự án.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="cta-button text-lg">
+                        Yêu Cầu Tư Vấn Miễn Phí
+                    </a>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <h3 class="font-bold text-lg text-amber-400">KHÔNG HẾT THẤM, KHÔNG THU TIỀN</h3>
+                        <p class="text-sm text-gray-300 mt-2">Cam kết hiệu quả tuyệt đối, mang lại sự an tâm cho khách hàng.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <h3 class="font-bold text-lg text-amber-400">BẢO HÀNH LÊN ĐẾN 10 NĂM</h3>
+                        <p class="text-sm text-gray-300 mt-2">Chất lượng bền vững theo thời gian, được đảm bảo bằng văn bản.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                        <h3 class="font-bold text-lg text-amber-400">VẬT LIỆU CHÍNH HÃNG</h3>
+                        <p class="text-sm text-gray-300 mt-2">Sử dụng vật liệu từ các thương hiệu uy tín: Sika, Mapei...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="card-reveal">
+                        <img src="images/nganh-ky-thuat-xay-dung-ra-truong-lam-gi.jpg" alt="Đội ngũ kỹ sư Hưng Thịnh" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="card-reveal">
+                        <h2 class="text-3xl font-bold text-[var(--main-blue)]">Hưng Thịnh Construction - Chuyên Gia Chống Thấm Hàng Đầu</h2>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Với hơn 10 năm kinh nghiệm, chúng tôi hiểu rằng thấm dột không chỉ gây hư hại kết cấu mà còn ảnh hưởng đến sức khỏe và thẩm mỹ ngôi nhà của bạn.
+                        </p>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Đội ngũ kỹ sư của Hưng Thịnh chuyên áp dụng các công nghệ tiên tiến nhất để mang lại giải pháp bền vững, an toàn và hiệu quả, bảo vệ toàn diện cho công trình của bạn.
+                        </p>
+                        <a href="#contact" class="mt-6 inline-block bg-[var(--secondary-blue)] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[var(--main-blue)] transition-colors duration-300">
+                            Tìm Hiểu Thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="section-title highlighted-section-title">Dịch Vụ Chống Thấm Chính</h2>
+                <p class="section-subtitle">Chúng tôi cung cấp giải pháp cho mọi vị trí, giải quyết triệt để từng vấn đề thấm dột cụ thể.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <!-- Service Card 1 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                            <i data-lucide="home" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Chống thấm Sàn mái & Sân thượng</h3>
+                        <p class="mt-2 text-gray-600">Ngăn chặn nước mưa thẩm thấu, bảo vệ kết cấu bê tông và không gian sống bên dưới.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                            <i data-lucide="bath" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Chống thấm Nhà vệ sinh & Khu vực ẩm</h3>
+                        <p class="mt-2 text-gray-600">Xử lý triệt để rò rỉ tại các vị trí phức tạp, đảm bảo vệ sinh và an toàn.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                           <i data-lucide="building-2" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Chống thấm Tường đứng</h3>
+                        <p class="mt-2 text-gray-600">Ngăn ngừa nấm mốc, loang lổ, bong tróc sơn, giữ cho tường nhà luôn mới đẹp.</p>
+                    </div>
+                     <!-- Service Card 4 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                            <i data-lucide="warehouse" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Chống thấm Tầng hầm & Hố thang máy</h3>
+                        <p class="mt-2 text-gray-600">Giải pháp chuyên dụng cho các hạng mục chịu áp lực nước ngầm cao.</p>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                           <i data-lucide="waves" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Chống thấm Bể nước & Bể bơi</h3>
+                        <p class="mt-2 text-gray-600">Đảm bảo an toàn nguồn nước và độ bền tuyệt đối cho công trình.</p>
+                    </div>
+                     <!-- Service Card 6 -->
+                    <div class="card-reveal bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-[var(--secondary-blue)] text-white w-16 h-16 rounded-full flex items-center justify-center">
+                           <i data-lucide="shield-alert" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6 text-gray-800">Xử lý Nứt bê tông & Khe tiếp giáp</h3>
+                        <p class="mt-2 text-gray-600">Áp dụng kỹ thuật bơm keo chuyên dụng, xử lý tận gốc các vết nứt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="section-title highlighted-section-title">Quy Trình Làm Việc Chuyên Nghiệp</h2>
+                <p class="section-subtitle">5 bước minh bạch đảm bảo hiệu quả và sự hài lòng tuyệt đối cho khách hàng.</p>
+                
+                <div class="relative mt-16 max-w-4xl mx-auto text-left">
+                    <!-- The vertical timeline bar -->
+                    <div class="absolute top-0 left-7 w-1 h-full bg-gray-200 transform -translate-x-1/2"></div>
+        
+                    <div class="space-y-10">
+                        <!-- Step 1: Khảo sát -->
+                        <div class="card-reveal relative">
+                            <div class="flex items-start">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-white ring-8 ring-slate-50 z-10">
+                                    <i data-lucide="search" class="w-7 h-7"></i>
+                                </div>
+                                <!-- Content -->
+                                <div class="ml-6 bg-white p-6 rounded-xl shadow-md border border-gray-200/80 flex-grow">
+                                    <span class="text-sm font-semibold text-teal-600">BƯỚC 1</span>
+                                    <h3 class="text-xl font-bold mt-1 text-gray-900">Khảo Sát & Tư Vấn Miễn Phí</h3>
+                                    <p class="mt-2 text-gray-600">Kỹ sư của chúng tôi sẽ đến tận công trình để kiểm tra, phân tích nguyên nhân thấm dột và tư vấn giải pháp xử lý tối ưu, hoàn toàn miễn phí.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Step 2: Báo giá -->
+                        <div class="card-reveal relative">
+                            <div class="flex items-start">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-white ring-8 ring-slate-50 z-10">
+                                    <i data-lucide="file-text" class="w-7 h-7"></i>
+                                </div>
+                                <!-- Content -->
+                                <div class="ml-6 bg-white p-6 rounded-xl shadow-md border border-gray-200/80 flex-grow">
+                                    <span class="text-sm font-semibold text-emerald-600">BƯỚC 2</span>
+                                    <h3 class="text-xl font-bold mt-1 text-gray-900">Lập Báo Giá Chi Tiết</h3>
+                                    <p class="mt-2 text-gray-600">Cung cấp báo giá minh bạch, chi tiết từng hạng mục vật tư và nhân công. Chúng tôi cam kết không phát sinh chi phí ngoài hợp đồng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Thi công -->
+                        <div class="card-reveal relative">
+                            <div class="flex items-start">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 w-14 h-14 bg-cyan-500 rounded-full flex items-center justify-center text-white ring-8 ring-slate-50 z-10">
+                                    <i data-lucide="construction" class="w-7 h-7"></i>
+                                </div>
+                                <!-- Content -->
+                                <div class="ml-6 bg-white p-6 rounded-xl shadow-md border border-gray-200/80 flex-grow">
+                                    <span class="text-sm font-semibold text-cyan-600">BƯỚC 3</span>
+                                    <h3 class="text-xl font-bold mt-1 text-gray-900">Ký Hợp Đồng & Thi Công</h3>
+                                    <p class="mt-2 text-gray-600">Sau khi thống nhất, hai bên ký hợp đồng và đội ngũ kỹ thuật của Hưng Thịnh sẽ tiến hành thi công theo đúng tiêu chuẩn kỹ thuật và tiến độ cam kết.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Step 4: Nghiệm thu -->
+                        <div class="card-reveal relative">
+                            <div class="flex items-start">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 w-14 h-14 bg-sky-500 rounded-full flex items-center justify-center text-white ring-8 ring-slate-50 z-10">
+                                    <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+                                </div>
+                                <!-- Content -->
+                                <div class="ml-6 bg-white p-6 rounded-xl shadow-md border border-gray-200/80 flex-grow">
+                                    <span class="text-sm font-semibold text-sky-600">BƯỚC 4</span>
+                                    <h3 class="text-xl font-bold mt-1 text-gray-900">Nghiệm Thu & Bàn Giao</h3>
+                                    <p class="mt-2 text-gray-600">Mời khách hàng nghiệm thu chất lượng công trình. Sau khi khách hàng hài lòng, chúng tôi sẽ bàn giao và dọn dẹp sạch sẽ công trường.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Step 5: Bảo hành -->
+                        <div class="card-reveal relative">
+                            <div class="flex items-start">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 w-14 h-14 bg-indigo-500 rounded-full flex items-center justify-center text-white ring-8 ring-slate-50 z-10">
+                                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                                </div>
+                                <!-- Content -->
+                                <div class="ml-6 bg-white p-6 rounded-xl shadow-md border border-gray-200/80 flex-grow">
+                                    <span class="text-sm font-semibold text-indigo-600">BƯỚC 5</span>
+                                    <h3 class="text-xl font-bold mt-1 text-gray-900">Bảo Hành & Chăm Sóc</h3>
+                                    <p class="mt-2 text-gray-600">Cấp phiếu bảo hành chính thức lên đến 10 năm. Luôn sẵn sàng hỗ trợ khách hàng chu đáo trong suốt thời gian bảo hành và sau đó.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="section-title highlighted-section-title">Dự Án Đã Thực Hiện</h2>
+                <p class="section-subtitle">Hình ảnh thực tế từ các công trình là minh chứng rõ ràng nhất cho năng lực của chúng tôi.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/quy-trinh-chong-tham-san-thuong.jpg" alt="Chống thấm sân thượng Biệt thự" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Chống thấm sân thượng Biệt thự</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Bề mặt bê tông nứt, thấm dột nghiêm trọng xuống phòng ngủ.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Sử dụng màng chống thấm Polyurethane cao cấp, co giãn tốt.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/cach-chong-tham-tuong-nha.jpg" alt="Xử lý thấm tường ngoài nhà phố" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Xử lý thấm tường ngoài Nhà phố</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Tường bị rêu mốc, loang màu do thấm từ bên ngoài.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Vệ sinh và thi công sơn chống thấm đàn hồi gốc Acrylic.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/chong-tham-san-mai-chuyen-nghiep.jpg" alt="Thi công chống thấm sàn mái nhà xưởng" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Thi công sàn mái nhà xưởng</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Sàn mái bê tông diện tích lớn, nhiều điểm nối, nguy cơ thấm cao.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Thi công chống thấm chuyên nghiệp, đảm bảo độ bền lâu dài.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/Sua-chua-cong-trinh-cong-nghiep.png" alt="Sửa chữa chống thấm công trình công nghiệp" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Sửa chữa công trình công nghiệp</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Công trình quy mô lớn, kết cấu phức tạp, dễ thấm dột tại mái, tường, sàn, ảnh hưởng sản xuất.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Áp dụng phương pháp chuyên dụng cho nhà xưởng, sử dụng vật liệu cường độ cao, bền bỉ.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/Chong-tham-ban-cong-se-no.jpeg" alt="Thi công chống thấm ban công, sê nô" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Chống thấm ban công, sê nô</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Thường xuyên tiếp xúc nước mưa, dễ nứt, đọng nước, gây thấm xuống tường và trần nhà.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Sử dụng màng chống thấm đàn hồi cao và sơn phủ bảo vệ chống tia UV, hiệu quả lâu dài.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/chong-tham-nha-ve-sinh-tai-quang-tri.jpg" alt="Thi công chống thấm nhà vệ sinh chuyên nghiệp" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Chống thấm nhà vệ sinh</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Rò rỉ qua cổ ống, chân tường, gây ẩm mốc, mùi hôi và ảnh hưởng kết cấu tầng dưới.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Thi công tỉ mỉ nhiều lớp, sử dụng vật liệu gốc xi măng 2 thành phần hoặc Polyurethane.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/su-dung-composite-chong-tham-ho-boi-hien-dai.jpg" alt="Thi công chống thấm bể bơi hiện đại" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Chống thấm bể bơi hiện đại</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Áp lực nước lớn, yêu cầu vật liệu chịu được hóa chất và đảm bảo an toàn nguồn nước.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Sử dụng vật liệu chuyên dụng, an toàn sức khỏe, có độ đàn hồi và bám dính tuyệt hảo.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/xu-ly-vet-nut-nen-nha-xuong.jpg" alt="Xử lý khe nứt sàn bê tông nhà xưởng" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Xử lý khe nứt sàn nhà xưởng</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Nứt do co ngót, chịu tải nặng, tạo đường cho nước và hóa chất thấm xuống dưới.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Bơm keo Epoxy hoặc Polyurethane chuyên dụng để hàn gắn lại kết cấu bê tông.</p>
+                        </div>
+                    </div>
+                    <div class="card-reveal bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/chong-tham-ho-pit-thang-may-bang-goc-xi-mang.jpg" alt="Thi công chống thấm hố thang máy, tầng hầm" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Chống thấm hố thang máy & tầng hầm</h3>
+                            <p class="mt-2 text-gray-600"><strong class="text-red-600">Vấn đề:</strong> Chịu áp lực nước ngầm lớn, dễ bị thấm ngược gây hư hỏng thiết bị và kết cấu.</p>
+                            <p class="mt-1 text-gray-600"><strong class="text-green-600">Giải pháp:</strong> Áp dụng chống thấm ngược, kết hợp phun thẩm thấu kết tinh và màng chống thấm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / CTA Section -->
+        <section class="py-20 bg-blue-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="section-title">Vì Sao Hơn 1500+ Khách Hàng Tin Chọn Hưng Thịnh?</h2>
+                    <p class="section-subtitle">Chúng tôi không chỉ bán dịch vụ, chúng tôi mang đến sự an tâm và bảo vệ cho ngôi nhà của bạn.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="card-reveal p-6">
+                        <i data-lucide="check-circle-2" class="mx-auto h-12 w-12 text-[var(--secondary-blue)]"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Hiệu Quả Triệt Để</h3>
+                        <p class="mt-1 text-gray-600">Cam kết "Không hết thấm, không thu tiền" là lời khẳng định mạnh nhất.</p>
+                    </div>
+                    <div class="card-reveal p-6">
+                        <i data-lucide="wrench" class="mx-auto h-12 w-12 text-[var(--secondary-blue)]"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Kỹ Thuật Chuyên Sâu</h3>
+                        <p class="mt-1 text-gray-600">Đội ngũ kỹ sư được đào tạo bài bản, am hiểu sâu về vật liệu và kỹ thuật.</p>
+                    </div>
+                    <div class="card-reveal p-6">
+                        <i data-lucide="award" class="mx-auto h-12 w-12 text-[var(--secondary-blue)]"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Vật Tư Chính Hãng</h3>
+                        <p class="mt-1 text-gray-600">Chỉ sử dụng sản phẩm từ các thương hiệu uy tín toàn cầu như Sika, Mapei.</p>
+                    </div>
+                    <div class="card-reveal p-6">
+                        <i data-lucide="thumbs-up" class="mx-auto h-12 w-12 text-[var(--secondary-blue)]"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Giá Cả Cạnh Tranh</h3>
+                        <p class="mt-1 text-gray-600">Tối ưu chi phí nhưng không bao giờ thỏa hiệp về chất lượng công trình.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="section-title highlighted-section-title">Liên Hệ Ngay Để Nhận Tư Vấn & Báo Giá</h2>
+                 <p class="section-subtitle">Để lại thông tin, chuyên gia của chúng tôi sẽ gọi lại cho bạn sau 5 phút!</p>
+                 <div class="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-12 bg-gray-50 p-8 rounded-xl shadow-lg text-left">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">Thông Tin Liên Hệ</h3>
+                        <ul class="mt-6 space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="building" class="h-6 w-6 text-[var(--secondary-blue)] mr-4 mt-1 flex-shrink-0"></i>
+                                <span><strong>Công ty Xây dựng Hưng Thịnh</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-[var(--secondary-blue)] mr-4 mt-1 flex-shrink-0"></i>
+                                <span>Xã Võ Ninh, Huyện Quảng Ninh, Tỉnh Quảng Bình (Ngã 3 Võ Xá, Cạnh UBND Xã)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="phone" class="h-6 w-6 text-[var(--secondary-blue)] mr-4 mt-1 flex-shrink-0"></i>
+                                <a href="tel:0915975234" class="hover:underline"><strong>Hotline / Zalo:</strong> 0915.975.234</a>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="mail" class="h-6 w-6 text-[var(--secondary-blue)] mr-4 mt-1 flex-shrink-0"></i>
+                                <a href="mailto:chongthamquangbinh@gmail.com" class="hover:underline">chongthamquangbinh@gmail.com</a>
+                            </li>
+                        </ul>
+                        <div class="mt-6">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.427773539755!2d106.5960416758872!3d17.24726488362095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3140a33177659551%3A0x6b6d5113d8d5dfd!2zVUJORCB4w6MgVsO1IE5pbmg!5e0!3m2!1svi!2s!4v1718766989123!5m2!1svi!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                        </div>
+                    </div>
+                    <div>
+                         <h3 class="text-2xl font-bold text-gray-800">Gửi Yêu Cầu Tư Vấn</h3>
+                         <form action="#" method="POST" class="mt-6 space-y-4">
+                            <div>
+                                <label for="name" class="sr-only">Họ và Tên</label>
+                                <input type="text" name="name" id="name" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--secondary-blue)] focus:ring-[var(--secondary-blue)] p-3" placeholder="Họ và Tên*">
+                            </div>
+                            <div>
+                                <label for="phone" class="sr-only">Số Điện Thoại</label>
+                                <input type="tel" name="phone" id="phone" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--secondary-blue)] focus:ring-[var(--secondary-blue)] p-3" placeholder="Số Điện Thoại*">
+                            </div>
+                            <div>
+                                <label for="message" class="sr-only">Mô tả vấn đề</label>
+                                <textarea name="message" id="message" rows="5" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--secondary-blue)] focus:ring-[var(--secondary-blue)] p-3" placeholder="Mô tả ngắn vấn đề của bạn..."></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full cta-button">
+                                    Gửi Yêu Cầu Ngay
+                                </button>
+                            </div>
+                         </form>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[var(--main-blue)] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p>© 2025 Bản quyền thuộc về Công ty Xây dựng Hưng Thịnh. All Rights Reserved.</p>
+            <p class="text-sm text-blue-200 mt-2">Giải pháp chống thấm chuyên nghiệp và bền vững.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+            
+            // Mobile Menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+            });
+
+            closeMobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            // Intersection Observer for animations
+            const revealElements = document.querySelectorAll('.card-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
